@@ -93,7 +93,7 @@ Netbox content is created by using Netbox docker initializers.
 The demo data doesn't make sense, but they are good enough for demonstrating how to configure Prometheus
 and get demo data to Prometheus service discovery.
 
-Go to the `example` folder and run `docker-compose up`. Prometheus should get available on `http://localhost:9090`.
+Go to the `example` folder and run `docker-compose up --build`. Prometheus should get available on `http://localhost:9090`.
 
 Push some example devices and objects to Netbox using the initializers:
 
@@ -105,34 +105,29 @@ Netbox content should then be available in the service discovery tab.
 
 ## Development
 
-We use Poetry for dependency management and invoke as task runner.
-As Netbox plugins cannot be tested standalone, we need invoke to start all code embedded in Netbox Docker containers.
+We use [Poetry](https://python-poetry.org/) for dependency management and [invoke](https://www.pyinvoke.org/) as task runner.
+To test the plugin in an isolated environment, we use [testcontainers](https://testcontainers.com/?language=python)
+which creates "throwaway, lightweight" Netbox Docker containers.
 
 All code to run in docker is located under `develop`.
 To start a virtual env managed by poetry run `poetry shell`.
 All following commands are started inside this environment.
 
-In order to run tests invoke the test steps
+In order to run tests invoke the tests:
 
 ```bash
-# Build Docker images
-invoke build
-
-# Execute all tests
-invoke tests
+# Build the containers and execute all tests
+invoke test
 ```
 
 Features should be covered by a unit test, but some times it's easier to develop on an running system.
 
 ```bash
-# Start a local Netbox with docker
-invoke start
-
-# Create an user named `admin`
-invoke create-user
+# Start a development environment
+invoke build_dev
 ```
 
-Visit http://localhost:8000 and log in with the new user.
+Visit http://localhost:8000 and log in with the default admin credentials.
 You can now define Netbox entities and test around.
 
 API endpoints for testing can be found at http://localhost:8000/api/plugins/prometheus-sd/
