@@ -34,10 +34,7 @@ class NetboxPrometheusSDModelViewSet(CustomFieldsMixin, ListModelMixin, BaseView
 
 
 class ServiceViewSet(NetboxPrometheusSDModelViewSet):
-    queryset = Service.objects.select_related(
-        "device",
-        "virtual_machine",
-    ).prefetch_related(
+    queryset = Service.objects.prefetch_related(
         "ipaddresses",
         "tags",
     )
