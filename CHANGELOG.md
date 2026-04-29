@@ -2,6 +2,43 @@
 
 <!-- version list -->
 
+## v1.4.0 (2026-04-29)
+
+### Bug Fixes
+
+- Add missing related relations
+  ([`291aa01`](https://github.com/lgfl-davidyoung/netbox-plugin-prometheus-sd/commit/291aa01862a7c453fa73679ee36e837280113e1b))
+
+- Annotate config context data on device/vm query sets
+  ([`841e105`](https://github.com/lgfl-davidyoung/netbox-plugin-prometheus-sd/commit/841e105493af54bcdfe2e165184aad49eede0224))
+
+- Use select_related for fk relations
+  ([`0d67081`](https://github.com/lgfl-davidyoung/netbox-plugin-prometheus-sd/commit/0d670819776ff8c8dfac42c48b649e10a249e844))
+
+### Chores
+
+- Trigger ci
+  ([`2ac1ab9`](https://github.com/lgfl-davidyoung/netbox-plugin-prometheus-sd/commit/2ac1ab92c119e10604714175e11e0d3fdf53c5c9))
+
+- **deps**: Bump actions/upload-artifact from 4 to 7
+  ([`a95e4f2`](https://github.com/lgfl-davidyoung/netbox-plugin-prometheus-sd/commit/a95e4f2fd828696efd7ace8ecdce479d754d7226))
+
+- **deps**: Bump docker/setup-buildx-action from 3 to 4
+  ([`908edbe`](https://github.com/lgfl-davidyoung/netbox-plugin-prometheus-sd/commit/908edbeec5b0a3f68a36103e21e3f27f1e240a0e))
+
+- **deps-dev**: Bump invoke from 2.2.1 to 3.0.1
+  ([`f4737df`](https://github.com/lgfl-davidyoung/netbox-plugin-prometheus-sd/commit/f4737dfaec2fbe52b2309cc9c4da02a28bc3b3d3))
+
+- **deps-dev**: Bump pygments from 2.19.2 to 2.20.0
+  ([`1addaf2`](https://github.com/lgfl-davidyoung/netbox-plugin-prometheus-sd/commit/1addaf24fd40130413ac82dacc33872079eb5fd3))
+
+- **deps-dev**: Bump requests from 2.32.5 to 2.33.0
+  ([`124c1cb`](https://github.com/lgfl-davidyoung/netbox-plugin-prometheus-sd/commit/124c1cb8b70611f5e5fb6bf3cfeb69191104954f))
+
+- **deps-dev**: Bump testcontainers from 4.14.1 to 4.14.2
+  ([`f2cbd7c`](https://github.com/lgfl-davidyoung/netbox-plugin-prometheus-sd/commit/f2cbd7cd517756dd1538360f9951cb3e6d926a92))
+
+
 ## v1.3.0 (2026-03-17)
 
 ### Bug Fixes

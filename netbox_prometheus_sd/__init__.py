@@ -5,7 +5,7 @@ except ImportError:
     from extras.plugins import PluginConfig
 
 # Placeholder for semantic release
-__VERSION__ = "1.3.0"
+__VERSION__ = "1.4.0"
 
 
 class PrometheusSD(PluginConfig):
