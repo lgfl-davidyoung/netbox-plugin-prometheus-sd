@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.4.1 (2026-04-29)
+
+### Bug Fixes
+
+- Drop incompatible select_related on ServiceViewSet for netbox 4.3+
+  ([`b81e5cf`](https://github.com/lgfl-davidyoung/netbox-plugin-prometheus-sd/commit/b81e5cf112c8361788435763f68b45d222f8083b))
+
+
 ## v1.4.0 (2026-04-29)
 
 ### Bug Fixes
